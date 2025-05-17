@@ -24,7 +24,9 @@ class ProductFactory extends Factory
             'code' => $this->faker->isbn13(),
             'image_url' => $this->faker->word(),
             'name' => $this->faker->numerify('Product-####'),
+            'category' => $this->faker->randomElement(['food', 'beverage', 'household', 'healthcare', 'personalcare']),
             'description' => $this->faker->paragraph(),
+            'price' => $this->faker->randomFloat(2),
             'stock' => $this->faker->randomNumber(3, true),
             'stock_alert_at' => $this->faker->randomNumber(2, true)
         ];

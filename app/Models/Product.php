@@ -14,6 +14,7 @@ class Product extends Model
         'code',
         'image_url',
         'name',
+        'category',
         'description',
         'price',
         'stock',

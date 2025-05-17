@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Product;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -14,10 +15,18 @@ class ProductFactory extends Factory
      *
      * @return array<string, mixed>
      */
+
+    protected $model = Product::class;
+
     public function definition(): array
     {
         return [
-            //
+            'code' => $this->faker->isbn13(),
+            'image_url' => $this->faker->word(),
+            'name' => $this->faker->numerify('Product-####'),
+            'description' => $this->faker->paragraph(),
+            'stock' => $this->faker->randomNumber(3, true),
+            'stock_alert_at' => $this->faker->randomNumber(2, true)
         ];
     }
 }

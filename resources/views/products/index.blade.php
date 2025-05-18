@@ -48,7 +48,7 @@
                         <span class="h5 mb-0">{{ formatCurrency($p->price, 'IDR') }}</span>
                     </div>
                     <div class="d-grid gap-2">
-                        <a class="btn btn-primary" type="button">View Detail</a>
+                        <a href="{{ route('products.show', $p->id) }}" class="btn btn-primary" type="button">View Detail</a>
                         <button class="btn btn-outline-secondary" type="button" id="addToCartBtn">Add to Cart</button>
                     </div>
                 </div>

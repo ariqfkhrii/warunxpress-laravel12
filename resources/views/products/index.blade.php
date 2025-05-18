@@ -49,7 +49,7 @@
             @foreach ($product as $p)
             <div class="col-md-4 mt-2 mb-2">
                 <div class="card h-100">
-                    <img src="https://fakeimg.pl/400x300/" class="card-img-top" alt="Product Image" width="400" height="300">
+                    <img src="{{ url('image') }}/{{ $p->image_url }}" class="card-img-top" alt="Product Image" width="400" height="300">
                     <div class="card-body">
                         <h5 class="card-title">{{ formatProductName($p->name, 65) }}</h5>
                         <p class="card-text">{{ formatProductDescription($p->description, 90) }}</p>
@@ -70,7 +70,7 @@
             <div class="card mb-4">
                 <div class="card-header d-flex justify-content-between align-items-center">
                     <h5 class="mb-0">Daftar Produk</h5>
-                    <a class="btn btn-sm btn-primary">Tambah data</a>
+                    <a href="{{ route('products.create') }}" class="btn btn-sm btn-primary">Tambah data</a>
                 </div>
                 <div class="card-body">
                     <table id="datatablesSimple" class="table table-bordered table-striped">
@@ -94,7 +94,7 @@
                                 <td>{{ $p->code }}</td>
                                 <td>{{ formatCurrency($p->price, 'IDR') }}</td>
                                 <td>
-                                    <img src="https://fakeimg.pl/400x300/" alt="project-image" class="rounded" style="width: 100%; max-width: 100px; height: auto;">
+                                    <img src="{{ url('image') }}/{{ $p->image_url }}" alt="project-image" class="rounded" style="width: 100%; max-width: 100px; height: auto;">
                                 </td>
                                 <td>
                                     <a href="{{ route('products.show', $p->id) }}" class="btn btn-sm btn-secondary">show</a>

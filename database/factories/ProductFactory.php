@@ -22,7 +22,7 @@ class ProductFactory extends Factory
     {
         return [
             'code' => $this->faker->isbn13(),
-            'image_url' => $this->faker->word(),
+            'image_url' => $this->faker->randomElement(['nophoto.jpg']),
             'name' => $this->faker->numerify('Product-####'),
             'category' => $this->faker->randomElement(['food', 'beverage', 'household', 'healthcare', 'personalcare']),
             'description' => $this->faker->paragraph(),

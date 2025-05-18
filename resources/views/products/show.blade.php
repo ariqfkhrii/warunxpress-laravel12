@@ -20,7 +20,7 @@
             <div class="row">
                 <!-- Product Images -->
                 <div class="col-md-6 mb-4">
-                    <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHwxfHxoZWFkcGhvbmV8ZW58MHwwfHx8MTcyMTMwMzY5MHww&ixlib=rb-4.0.3&q=80&w=1080" alt="Product" class="img-fluid rounded mb-3 product-image" id="mainImage">
+                    <img src="{{ url('image') }}/{{ $product->image_url }}" alt="Product" class="img-fluid rounded mb-3 product-image" id="mainImage">
                 </div>
 
                 <!-- Product Details -->

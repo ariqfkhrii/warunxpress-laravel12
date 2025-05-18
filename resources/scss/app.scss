@@ -1,5 +1,9 @@
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";
 
+.navbar-light .navbar-nav .nav-link {
+  color: #000;
+}
+
 .search-wrapper {
     max-width: 800px;
     margin: 0 auto;

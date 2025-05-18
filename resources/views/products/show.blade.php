@@ -2,8 +2,16 @@
 
 @section('title', 'Detail Product')
 
+@php
+    $isUser = false;
+@endphp
+
 @section('navbar')
-    @include('partials.user-navbar')
+    @if ($isUser)
+        @include('partials.user-navbar')
+    @else
+        @include('partials.stocker-navbar')
+    @endif
 @endsection
 
 @section('content')
@@ -24,13 +32,15 @@
                     </div>
 
                     <p class="mb-4">{{ $product->description }}</p>
-                    <div class="mb-4">
-                        <label for="quantity" class="form-label">Quantity:</label>
-                        <input type="number" class="form-control" id="quantity" value="1" min="1" style="width: 80px;">
-                    </div>
-                    <button class="btn btn-primary btn-lg mb-3 me-2">
-                            <i class="bi bi-cart-plus"></i> Add to Cart
+                    @if ($isUser)
+                        <div class="mb-4">
+                            <label for="quantity" class="form-label">Quantity:</label>
+                            <input type="number" class="form-control" id="quantity" value="1" min="1" style="width: 80px;">
+                        </div>
+                        <button class="btn btn-primary btn-lg mb-3 me-2">
+                                <i class="bi bi-cart-plus"></i> Add to Cart
                         </button>
+                    @endif
                 </div>
             </div>
         </div>

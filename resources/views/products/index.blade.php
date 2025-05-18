@@ -17,10 +17,10 @@
                     width="400"
                     height="300">
                 <div class="card-body">
-                    <h5 class="card-title">{{ $p->name }}</h5>
-                    <p class="card-text">High-quality wireless headphones with noise cancellation technology.</p>
+                    <h5 class="card-title">{{ formatProductName($p->name, 65) }}</h5>
+                    <p class="card-text">{{ formatProductDescription($p->description, 90) }}</p>
                         <div class="d-flex justify-content-between align-items-center mb-2">
-                            <span class="h5 mb-0">{{ $p->price }}</span>
+                            <span class="h5 mb-0">{{ formatCurrency($p->price, 'IDR') }}</span>
                         </div>
                         <div class="d-grid gap-2">
                                 <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#productModal">Quick View</button>

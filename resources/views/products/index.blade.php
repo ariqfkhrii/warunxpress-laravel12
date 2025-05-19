@@ -98,7 +98,7 @@
                                 </td>
                                 <td>
                                     <a href="{{ route('products.show', $p->id) }}" class="btn btn-sm btn-secondary">show</a>
-                                    <a class="btn btn-sm btn-warning">edit</a>
+                                    <a href="{{ route('products.edit', $p->id) }}" class="btn btn-sm btn-warning">edit</a>
                                     <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal{{$p->id}}">
                                         hapus
                                     </button>
